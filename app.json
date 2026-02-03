@@ -1,0 +1,32 @@
+{
+  "stack": "heroku-24",
+  "addons": [
+    "heroku-postgresql:essential-0"
+  ],
+  "environments": {
+    "review": {
+      "addons": [
+        "heroku-postgresql:essential-0"
+      ],
+      "scripts": {
+        "postdeploy": "bundle exec rails db:schema:load"
+      },
+      "env": {
+        "RAILS_ENV": "review",
+        "DISABLE_DATABASE_ENVIRONMENT_CHECK": "1"
+      }
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "YARN_PRODUCTION": "true"
+  }
+}

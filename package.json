@@ -1,0 +1,10 @@
+{
+  "name": "book-collection-solution",
+  "private": true,
+  "dependencies": {},
+  "engines": {
+    "node": "20.x",
+    "yarn": "1.22.x"
+  },
+  "version": "0.1.0"
+}
